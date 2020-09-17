@@ -1,0 +1,30 @@
+{
+  "name": "moai-mawashi",
+  "version": "1.0.0",
+  "description": "A simple browser game inspired by the famous flash game Moai Mawashi.",
+  "main": "src/Index.bs.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reason-react": "^0.9.1"
+  },
+  "devDependencies": {
+    "bs-platform": "^8.2.0"
+  },
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "bsb -make-world -clean-world && parcel build public/index.html",
+    "re:watch": "bsb -make-world -clean-world -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey-cube/moai-mawashi.git"
+  },
+  "author": "hey_cube <tales.phan.x@gmail.com> (https://github.com/hey-cube)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hey-cube/moai-mawashi/issues"
+  },
+  "homepage": "https://github.com/hey-cube/moai-mawashi#readme"
+}
