@@ -27,7 +27,7 @@ let initParams = (): array(array(param)) => {
   let randomParam = (): param => {
     // 絶対値1以下と1以上が同じくらい生成されて欲しい
     let slope =
-      Random.bool() ? randomFloat(-1., 1.) : randomFloat(-10., 10.);
+      Random.bool() ? randomFloat(-1., 1.) : randomFloat(-100., 100.);
     let cycle = randomFloat(30., diagonal);
 
     (slope, cycle);
