@@ -45,6 +45,15 @@ let initParams = (): array(array(param)) => {
   Array.concat(params, [|exRow|])->Array.shuffle;
 };
 
+let rec trimRotation = (r: float) =>
+  if (0. < r && r < 360.) {
+    r;
+  } else if (r < 0.) {
+    trimRotation(r +. 360.);
+  } else {
+    trimRotation(r -. 360.);
+  };
+
 let calculateRotations =
     (intersection: point, mousePoint: point, params: array(param))
     : array(rotation) => {
@@ -59,8 +68,7 @@ let calculateRotations =
       let (a, m) = param;
       let b = q -. a *. p;
       let d = (a *. x -. y +. b) /. pythagorean(a, -1.);
-      let r = d *. 360. /. m;
-      r;
+      trimRotation(d *. 360. /. m);
     },
   );
 };
