@@ -1,0 +1,9 @@
+#field {
+  margin: 0 auto;
+  width: 800px;
+  border: medium solid black;
+}
+
+.container {
+  display: flex;
+}

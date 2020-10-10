@@ -1,1 +1,1 @@
-Js.log("Hello, ReScript!");
+ReactDOMRe.renderToElementWithId(<App />, "root");
