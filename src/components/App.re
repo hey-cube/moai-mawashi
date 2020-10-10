@@ -57,7 +57,7 @@ let make = () => {
   let onClick = (_: ReactEvent.Mouse.t) => {
     let (x, y) = mousePoint;
     let (interX, interY) = intersection;
-    if (abs(x - interX) < 5 && abs(y - interY) < 5) {
+    if (abs(x - interX) < 3 && abs(y - interY) < 3) {
       let time = Js.Date.now() -. startTime;
       alert(
         "Game clear!\nYour time is "
