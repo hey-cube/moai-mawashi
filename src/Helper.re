@@ -46,7 +46,7 @@ let initParams = (): array(array(param)) => {
 };
 
 let rec trimRotation = (r: float) =>
-  if (0. < r && r < 360.) {
+  if (0. <= r && r < 360.) {
     r;
   } else if (r < 0.) {
     trimRotation(r +. 360.);
